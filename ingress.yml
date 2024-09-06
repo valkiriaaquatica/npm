@@ -1,0 +1,34 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: nginx-proxy-manager-ingress
+  namespace: manager
+spec:
+  ingressClassName: nginx
+  rules:
+    - host: awx.docker.casa.lan
+      http:
+        paths:
+          - pathType: Prefix
+            backend:
+              service:
+                name: nginx-proxy-manager
+                port:
+                  number: 80
+            path: /
+
+          # - pathType: Prefix
+          #   backend:
+          #     service:
+          #       name: nginx-proxy-manager
+          #       port:
+          #         number: 81
+          #   path: /
+
+          # - pathType: Prefix
+          #   backend:
+          #     service:
+          #       name: nginx-proxy-manager
+          #       port:
+          #         number: 443
+          #   path: /

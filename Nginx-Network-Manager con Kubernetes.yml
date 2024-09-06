@@ -1,0 +1,22 @@
+Nginx-Network-Manager con Kubernetes:
+
+# https://blog.antnsn.dev/2023-p2-ingress-as-a-reverse-proxy/
+
+
+# Hay que dar de alta 3 objetos:
+
+...
+# A reverse proxy typically requires three manifests: Endpoint, Service, and Ingress. These manifests define the endpoints and services to be exposed by the Ingress Controller and the rules for routing traffic to them.
+
+# An Endpoint manifest defines the IP address and port of an external service. A Service manifest exposes the endpoint as a Kubernetes Service object, which can then be used by the Ingress Controller to route traffic to the endpoint.
+
+# Finally, an Ingress manifest defines the rules for routing traffic to the Service objects. It specifies the hostname, path, and other criteria for routing traffic to the appropriate Service object.
+# ...
+
+# Endpoint
+
+
+# Service:
+
+
+# Ingress:

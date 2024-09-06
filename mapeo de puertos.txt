@@ -1,0 +1,1 @@
+sudo kubectl port-forward nginx-proxy-manager-5668cc7564-nlwsj 81:81

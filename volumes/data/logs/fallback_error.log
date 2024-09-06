@@ -1,0 +1,6 @@
+2024/09/05 17:44:21 [alert] 178#178: 512 worker_connections are not enough
+2024/09/05 17:44:21 [error] 179#179: *985 recv() failed (104: Connection reset by peer) while reading response header from upstream, client: 127.0.0.1, server: localhost-nginx-proxy-manager, request: "GET /favicon.ico HTTP/1.1", upstream: "http://127.0.0.1:80/favicon.ico", host: "awx.docker.casa.lan", referrer: "http://awx.docker.casa.lan:31927/"
+2024/09/05 18:18:53 [alert] 178#178: 512 worker_connections are not enough
+2024/09/05 18:18:53 [error] 179#179: *1988 recv() failed (104: Connection reset by peer) while reading response header from upstream, client: 127.0.0.1, server: localhost-nginx-proxy-manager, request: "GET /favicon.ico HTTP/1.1", upstream: "http://127.0.0.1:80/favicon.ico", host: "awx.docker.casa.lan", referrer: "http://awx.docker.casa.lan/"
+2024/09/06 08:14:53 [alert] 178#178: 512 worker_connections are not enough
+2024/09/06 08:14:53 [error] 178#178: *987 recv() failed (104: Connection reset by peer) while reading response header from upstream, client: 127.0.0.1, server: localhost-nginx-proxy-manager, request: "GET /favicon.ico HTTP/1.1", upstream: "http://127.0.0.1:80/favicon.ico", host: "10.0.0.10", referrer: "http://10.0.0.10:31080/"
