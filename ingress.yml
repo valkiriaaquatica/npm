@@ -1,21 +1,23 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: nginx-proxy-manager-ingress
-  namespace: manager
+  name: nginx-ingress
+  # crea un ns que se llame test
+  namespace: test
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: / 
 spec:
-  ingressClassName: nginx
   rules:
-    - host: awx.docker.casa.lan
-      http:
-        paths:
-          - pathType: Prefix
-            backend:
-              service:
-                name: nginx-proxy-manager
-                port:
-                  number: 80
-            path: /
+  - host: nginx.example.com  # ESTO ES POR DONDE SE ACCEDERA AL SERVICIO WEB DE NGINX, EN EL /etc/hosts en tu host de windows ponlo conla IP que coga el ingress
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: nginx-service 
+            port:
+              number: 80 
 
           # - pathType: Prefix
           #   backend:
