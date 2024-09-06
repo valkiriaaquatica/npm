@@ -1,27 +1,13 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: nginx-proxy-manager
-  namespace: manager
+  name: nginx-service  # neuvo nombre del svbc
+  namespace: test  # es el namspeace nuevo
 spec:
-  type: NodePort
   selector:
-    app: nginx-proxy-manager
+    app: nginx 
   ports:
     - protocol: TCP
-      name: http
       port: 80
-      targetPort: 80
-      nodePort: 31080
-
-    - protocol: TCP
-      name: admin
-      port: 81
-      targetPort: 81
-      nodePort: 31081
-
-    - protocol: TCP
-      name: https
-      port: 443
-      targetPort: 443
-      nodePort: 31443
+      targetPort: 80 
+  type: ClusterIP  
